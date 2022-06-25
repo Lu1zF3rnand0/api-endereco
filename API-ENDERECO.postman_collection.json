@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "e1973c96-8e0e-46f6-bb84-daa6fecdc659",
+		"name": "API-ENDERECO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19466233"
+	},
+	"item": [
+		{
+			"name": "Lista Enderecos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Endereco por CEP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/endereco/:cep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						":cep"
+					],
+					"variable": [
+						{
+							"key": "cep",
+							"value": "Cep6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insere Endereco",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"cep\": \"CepTeste\",\r\n        \"logradouro\": \"Logradouro\",\r\n        \"complemento\": \"Complemento\",\r\n        \"bairro\": \"Bairro\",\r\n        \"localidade\": \"Localidade\",\r\n        \"uf\": \"Uf\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exclui Endereco",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"cep\": \"CepTeste\",\r\n        \"logradouro\": \"Logradouro\",\r\n        \"complemento\": \"Complemento\",\r\n        \"bairro\": \"Bairro\",\r\n        \"localidade\": \"Localidade\",\r\n        \"uf\": \"Uf\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/endereco/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "23"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
